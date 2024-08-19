@@ -13,6 +13,10 @@ export default {
         titan: '2.5rem',
         intermediate: '1.5rem',
         classic: '1rem'
+      },
+      container: {
+        center: true,
+        padding: '1rem'
       }
     },
   },
