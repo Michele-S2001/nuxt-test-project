@@ -9,6 +9,6 @@ const props = defineProps({
 
 <template>
   <p :class="['py-6 px-3 text-white text-classic', props.colorClass]">
-    <slot>No valid classes entered</slot>
+    <slot>Insert text</slot>
   </p>
 </template>

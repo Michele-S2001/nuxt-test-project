@@ -5,6 +5,11 @@ interface colorStr {
   colorCustomCode: string
 }
 
+interface fontsizeDataType {
+  fontsizeCustomClass: string,
+  fontSizeCustomLabel: string
+}
+
 const colorsPalette:colorStr[] = [
   {
     colorCustomClass: 'bg-deepBlue',
@@ -22,6 +27,21 @@ const colorsPalette:colorStr[] = [
     colorCustomClass: 'bg-saharaOcre',
     colorCustomCode: '#FFAD00'
   },
+];
+
+const fontsizesList:fontsizeDataType[] = [
+  {
+    fontsizeCustomClass: 'text-titan',
+    fontSizeCustomLabel: 'titan'
+  },
+  {
+    fontsizeCustomClass: 'text-intermediate',
+    fontSizeCustomLabel: 'intermediate'
+  },
+  {
+    fontsizeCustomClass: 'text-classic',
+    fontSizeCustomLabel: 'classic'
+  }
 ]
 
 </script>
@@ -42,9 +62,12 @@ const colorsPalette:colorStr[] = [
           <header class="mb-8">
             <Subheading>Typography</Subheading>
           </header>
-          <TypographySample size="b" />
-          <TypographySample size="m" />
-          <TypographySample size="s" />
+          <TypographySample 
+            v-for="(fontSize, i) in fontsizesList" 
+            :key="i" 
+            :fontClass="fontSize.fontsizeCustomClass">
+            {{ fontSize.fontSizeCustomLabel }}
+          </TypographySample>
         </article>
         <!-- COLORS -->
         <article>
