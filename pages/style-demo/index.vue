@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+useHead({
+  title: 'Colors and Typography - Nuxt test project'
+})
 
 interface colorStr {
   colorCustomClass: string,

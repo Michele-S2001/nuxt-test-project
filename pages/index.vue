@@ -1,4 +1,9 @@
+<script lang="ts" setup>
+useHead({
+  title: 'Home - Nuxt test project'
+})
 
+</script>
 
 <template>
 

@@ -1,3 +1,8 @@
+<script lang="ts" setup>
+useHead({
+  title: 'State Menagement - Nuxt test project'
+})
+</script>
 
 <template>
   <header>
