@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import DefaultLayout from '~/layouts/default.vue';
+definePageMeta({
+  layout: false,
+})
 
 useHead({
   title: 'State Menagement - Nuxt test project'

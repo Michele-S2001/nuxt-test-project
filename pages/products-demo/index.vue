@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import DefaultLayout from '~/layouts/default.vue';
+definePageMeta({
+  layout: false,
+})
 
 interface Product {
   id: number;
