@@ -18,6 +18,10 @@ const navLinks:navLink[] = [
     uri: '/state-demo',
     pageName: 'state menagement'
   },
+  {
+    uri: '/products-demo',
+    pageName: 'products'
+  },
 ]
 
 </script>
