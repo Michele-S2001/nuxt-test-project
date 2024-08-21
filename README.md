@@ -47,4 +47,4 @@ Il progetto è strutturato in 4 pagine principali:
 
 - Global State Menagement (/state-demo): Una pagina con un input che modifica un valore globale nello store di pinia, visualizzando un messaggio dinamico
 
-- Product List Page (/products): Recupera e mostra prodotti fittizi tramite una chiamata API
+- Product List Page (/products-demo): Recupera e mostra prodotti fittizi tramite una chiamata API
