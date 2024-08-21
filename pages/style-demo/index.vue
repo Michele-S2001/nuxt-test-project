@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import DefaultLayout from '~/layouts/defaultLayout.vue';
+
 useHead({
   title: 'Colors and Typography - Nuxt test project'
 })
@@ -50,44 +52,41 @@ const fontsizesList:fontsizeDataType[] = [
 </script>
 
 <template>
-  <header>
-    <div class="container">
-      <Navbar />
-    </div>
-  </header>
-
-  <section class="py-5">
-    <div class="container">
-      <h1 class="text-4xl mb-10">Colors & Typography</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <!-- TYPOGRAPHY -->
-        <article>
-          <header class="mb-8">
-            <Subheading>Typography</Subheading>
-          </header>
-          <TypographySample 
-            v-for="(fontSize, i) in fontsizesList" 
-            :key="i" 
-            :fontClass="fontSize.fontsizeCustomClass">
-            {{ fontSize.fontSizeCustomLabel }}
-          </TypographySample>
-        </article>
-        <!-- COLORS -->
-        <article>
-          <header class="mb-5">
-            <Subheading>Colors</Subheading>
-          </header>
-          <div class="flex flex-col gap-4">
-            <ColorBox 
-              v-for="(color, i) in colorsPalette" 
+  <DefaultLayout>
+    <section class="py-5">
+      <div class="container">
+        <h1 class="text-4xl mb-10">Colors & Typography</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- TYPOGRAPHY -->
+          <article>
+            <header class="mb-8">
+              <Subheading>Typography</Subheading>
+            </header>
+            <TypographySample 
+              v-for="(fontSize, i) in fontsizesList" 
               :key="i" 
-              :colorClass="color.colorCustomClass">
-              {{ color.colorCustomCode }}
-            </ColorBox>
-          </div>
-        </article>
+              :fontClass="fontSize.fontsizeCustomClass">
+              {{ fontSize.fontSizeCustomLabel }}
+            </TypographySample>
+          </article>
+          <!-- COLORS -->
+          <article>
+            <header class="mb-5">
+              <Subheading>Colors</Subheading>
+            </header>
+            <div class="flex flex-col gap-4">
+              <ColorBox 
+                v-for="(color, i) in colorsPalette" 
+                :key="i" 
+                :colorClass="color.colorCustomClass">
+                {{ color.colorCustomCode }}
+              </ColorBox>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </DefaultLayout>
+
 
 </template>
