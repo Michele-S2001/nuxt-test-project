@@ -36,8 +36,15 @@ const { data:products, status, error } = await useFetch<Product[]>('https://fake
           <p class="text-intermediate text-crimson py-4 font-semibold">Error: {{ error.message }}</p>
         </div>
         <!-- success -->
-        <div class="py-10" v-else>
-          <p v-for="product in products" :key="product.id">{{ product.title }}</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-10 py-10" v-else>
+          <ProductCard 
+            v-for="product in products" 
+            :key="product.id"
+            :product-name="product.title"
+            :product-category="product.category"
+            :product-img-url="product.image"
+            :product-price="product.price"
+            :product-rate="product.rating.rate"/>
         </div>
       </div>
     </section>
