@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import DefaultLayout from '~/layouts/defaultLayout.vue';
+import DefaultLayout from '~/layouts/default.vue';
 
 useHead({
   title: 'Colors and Typography - Nuxt test project'
@@ -52,7 +52,7 @@ const fontsizesList:fontsizeDataType[] = [
 </script>
 
 <template>
-  <DefaultLayout>
+  <NuxtLayout name="default">
     <section class="py-5">
       <div class="container">
         <h1 class="text-4xl mb-10">Colors & Typography</h1>
@@ -86,7 +86,7 @@ const fontsizesList:fontsizeDataType[] = [
         </div>
       </div>
     </section>
-  </DefaultLayout>
+  </NuxtLayout>
 
 
 </template>

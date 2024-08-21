@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import DefaultLayout from '~/layouts/defaultLayout.vue';
+import DefaultLayout from '~/layouts/default.vue';
 
 useHead({
   title: 'State Menagement - Nuxt test project'
@@ -8,7 +8,7 @@ useHead({
 
 <template>
   
-  <DefaultLayout>
+  <NuxtLayout name="default">
     <section class="py-5">
       <div class="container">
         <h1 class="text-4xl mb-10 capitalize">Global state menagement</h1>
@@ -16,6 +16,6 @@ useHead({
         <MessageEditor />
       </div>
     </section>
-  </DefaultLayout>
+  </NuxtLayout>
 
 </template>
