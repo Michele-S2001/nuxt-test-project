@@ -20,9 +20,9 @@ const inputValue = ref('');
         @keyup.enter="modifyMessage"
         placeholder="Type something..."
         class="leading-10 text-classic sm:text-intermediate bg-transparent w-full px-5 outline-none">
-      <button @click="modifyMessage">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-mistGray hover:text-saharaOcre">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+      <button @click="modifyMessage" aria-label="insert the new message">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hover:text-saharaOcre">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25" />
         </svg>
       </button>
     </div>
