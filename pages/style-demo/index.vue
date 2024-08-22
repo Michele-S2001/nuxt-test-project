@@ -76,7 +76,7 @@ const fontsizesList:fontsizeDataType[] = [
             <header class="mb-5">
               <Subheading>Colors</Subheading>
             </header>
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-3">
               <ColorBox 
                 v-for="(color, i) in colorsPalette" 
                 :key="i" 
