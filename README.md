@@ -17,7 +17,7 @@ Focus del task, creare un progetto che segua i seguenti step:
   1. Aggiungi e configura Pinia nel progetto
   Crea un nuovo store globale in Pinia chiamato “useGlobalStore”.
   2. Aggiungi una variabile globale chiamata “message” con valore predefinito "Hello World!".
-  3. Crea un metodo chiamato ”etMessage” nello store che permette di modificare il valore di “message”.
+  3. Crea un metodo chiamato ”setMessage” nello store che permette di modificare il valore di “message”.
   4. Includi il “message” in una pagina, visualizzandolo in un componente, e fornisci un input o un pulsante per modificarne il valore usando il metodo “setMessage”.
  
 
