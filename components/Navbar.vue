@@ -34,7 +34,7 @@ const navLinks:navLink[] = [
       <li 
         v-for="(link, i) in navLinks" :key="i" 
         class="transition cursor-pointer ease-in-out duration-200 hover:scale-110 active:scale-95 active:transition active:duration-100 active:ease-in-out capitalize text-black border border-neutral-100 font-semibold rounded-3xl text-lg shadow-xl">
-        <NuxtLink :to="link.uri" class="leading-10 px-3">{{ link.pageName }}</NuxtLink>
+        <NuxtLink :to="link.uri" class="block leading-10 px-3">{{ link.pageName }}</NuxtLink>
       </li>
     </ul>
   </nav>
