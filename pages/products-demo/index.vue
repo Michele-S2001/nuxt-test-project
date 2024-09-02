@@ -24,16 +24,15 @@ const products = ref<Product[] | null>(null);
 const error = ref<Error | null>(null);
 
 async function fetchProducts() {
-  try {
-    const response = await fetch('https://fakestoreapi.com/products');
-    if (!response.ok) {
-      throw new Error('Failed to fetch products');
-    }
-    products.value = await response.json();
-  } catch (err) {
-    console.error('Error fetching products:', err);
-    error.value = err as Error;
-  }
+  await fetch('https://fakestoreapi.com/products')
+    .then(async (res) => {
+      if (!res.ok) {
+       throw new Error('Failed to fetch products');
+      }
+      products.value = await res.json();
+    }).catch((err) => {
+      error.value = err as Error;
+    })
 }
 
 onMounted(() => {
